@@ -320,14 +320,8 @@ setRefClass("model",
             if(length(inits)>nb_init_max)
             {
                 say(5,'Computing intializations quality')
-                # 1
-                print(nb_init_max)
-                
-                quality<-.self$membership_init_quality(inits)
-                # 2
-                print(quality)
-                
-                seuil <- (sort(as.numeric(quality), decreasing = T))[nb_init_max]
+                quality<-as.numeric(.self$membership_init_quality(inits))
+                seuil <- (-sort(-quality))[nb_init_max]
                 filter <- filter & (quality >= seuil)
             }
 
