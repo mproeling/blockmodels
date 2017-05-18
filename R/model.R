@@ -165,7 +165,7 @@ setRefClass("model",
             .self$precompute()
 
             l<-TRUE
-            n<-1
+            n<-5
             while(l)
             {
                 say(1,"Pass",n)
@@ -586,7 +586,7 @@ setRefClass("model",
                 
                 print(length(is.na(quals)))
                 print(length(naquals))
-                print("test5")
+                print("test6")
                 # ends here 
                 
                 quals[is.na(quals)] <- naquals          
