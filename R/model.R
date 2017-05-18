@@ -564,7 +564,7 @@ setRefClass("model",
                 }
 
                 print(dim(is.na(quals)))
-                print(dim(naquals)
+                print(dim(naquals))
                   
                 print(is.na(quals))
                 print(naquals)
