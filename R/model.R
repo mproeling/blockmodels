@@ -586,7 +586,7 @@ setRefClass("model",
                 
                 print(length(is.na(quals)))
                 print(length(naquals))
-                print("test3")
+                print("test4")
                 # ends here 
                 
                 quals[is.na(quals)] <- naquals          
