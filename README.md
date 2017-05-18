@@ -8,5 +8,5 @@ In addition: Warning message:
 In quals[is.na(quals)] <- naquals :
   number of items to replace is not a multiple of replacement length
   
-Forked respository to experiment with some fixed in model.R
+Forked respository to experiment with some fixes in model.R
   
