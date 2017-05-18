@@ -320,9 +320,9 @@ setRefClass("model",
             if(length(inits)>nb_init_max)
             {
                 say(5,'Computing intializations quality')
-                kind <- .self$membership_init_quality(inits)
-                seuil <- (-sort(-kind))[nb_init_max]
-                filter <- filter & (kind >= seuil)
+                quality <- as.numeric(.self$membership_init_quality(inits))
+                seuil <- (-sort(-quality))[nb_init_max]
+                filter <- filter & (quality >= seuil)
             }
 
             inits <- inits[filter]
