@@ -563,12 +563,8 @@ setRefClass("model",
                     digest_already_quality_computed[[inits[[i]]$digest()]] <<- naquals[i]
                 }
                 
-                print(length(inits))
-                print(length(quals))
                 print(length(is.na(quals)))
                 print(length(naquals))
-                
-                
                 print(is.na(quals))
                 print(naquals)
                 
@@ -576,6 +572,7 @@ setRefClass("model",
                 if(length(is.na(quals)) != length(naquals))
                 {
                   difference = length(is.na(quals)) - length(naquals)
+                  print(5555)
                   a = length(naquals)
                   for(z in 1:difference)
                   {
