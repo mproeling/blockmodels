@@ -562,10 +562,14 @@ setRefClass("model",
                 {
                     digest_already_quality_computed[[inits[[i]]$digest()]] <<- naquals[i]
                 }
-
+                
+                print("inits:")
                 print(length(inits))
+                print("quals:")
                 print(length(quals))
+                print("is na quals")
                 print(length(is.na(quals)))
+                print("na quals")
                 print(length(naquals))
                 
                 
