@@ -573,14 +573,21 @@ setRefClass("model",
                 print(naquals)
                 
                 # change made after crash
-                if(length(is.na(quals)) != length(naquals)){
+                if(length(is.na(quals)) != length(naquals))
+                {
                   difference = length(is.na(quals)) - length(naquals)
-                  for(i in z:difference){
-                    a = length(is.na(quals)) + z 
-                    naquals[a] = NULL
+                  a = length(naquals)
+                  for(z in 1:difference)
+                  {
+                    b = a + z 
+                    print(b)
+                    naquals[b+1] = NULL
                   }
                 }
-                   
+                
+                print(length(is.na(quals)))
+                print(length(naquals))
+                
                 quals[is.na(quals)] <- naquals          
                 toc('quality_computation') 
             }
