@@ -522,7 +522,7 @@ setRefClass("model",
                     }
                     else
                     {
-                        return(qual)
+                        return(as.numeric(qual))
                     }
                 }
             )
