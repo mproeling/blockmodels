@@ -553,7 +553,7 @@ setRefClass("model",
                                         getRefClass(membership_name)(
                                                 from_cc=r$membership)$ICL_penalty())
                         },
-                        mc.cores=ncores,
+                        mc.cores=1,
                         verbose=(verbosity>4)
                     )
                 )
@@ -563,9 +563,9 @@ setRefClass("model",
                     digest_already_quality_computed[[inits[[i]]$digest()]] <<- naquals[i]
                 }
 
-                #quals[is.na(quals)] <- naquals
+                quals[is.na(quals)] <- naquals
                 # change made after crash
-                quals[1:length(is.na(naquals))] <- naquals
+                #quals[1:length(is.na(naquals))] <- naquals
            
                 toc('quality_computation') 
             }
