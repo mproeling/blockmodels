@@ -320,7 +320,13 @@ setRefClass("model",
             if(length(inits)>nb_init_max)
             {
                 say(5,'Computing intializations quality')
+                # 1
+                print(nb_init_max)
+                
                 quality<-.self$membership_init_quality(inits)
+                # 2
+                print(quality)
+                
                 seuil <- (-sort(-quality))[nb_init_max]
                 filter <- filter & (quality >= seuil)
             }
@@ -568,13 +574,13 @@ setRefClass("model",
                 # starts here 
                 print(length(is.na(quals)))
                 print(length(naquals))
-                print(is.na(quals))
-                print(naquals)
+                #print(is.na(quals))
+                #print(naquals)
                 
                 if(length(is.na(quals)) != length(naquals))
                 {
                   difference = length(is.na(quals)) - length(naquals)
-                  print(5555)
+                  print(1000000)
                   a = length(naquals)
                   for(z in 1:difference)
                   {
