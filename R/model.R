@@ -320,8 +320,8 @@ setRefClass("model",
             if(length(inits)>nb_init_max)
             {
                 say(5,'Computing intializations quality')
-                quality<-as.numeric(.self$membership_init_quality(inits))
-                seuil <- (-sort(-quality))[nb_init_max]
+                quality <- .self$membership_init_quality(inits)
+                seuil <- (-sort(quality))[nb_init_max]
                 filter <- filter & (quality >= seuil)
             }
 
@@ -586,7 +586,7 @@ setRefClass("model",
                 
                 print(length(is.na(quals)))
                 print(length(naquals))
-                print("test1")
+                print("test2")
                 # ends here 
                 
                 quals[is.na(quals)] <- naquals          
