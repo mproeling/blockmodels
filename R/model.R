@@ -575,8 +575,8 @@ setRefClass("model",
                 # change made after crash
                 if(length(is.na(quals)) != length(naquals)){
                   difference = length(is.na(quals)) - length(naquals)
-                  for(i in 1:difference){
-                    a = length(is.na(quals)) + 1 
+                  for(i in z:difference){
+                    a = length(is.na(quals)) + z 
                     naquals[a] = NULL
                   }
                 }
