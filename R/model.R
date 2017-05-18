@@ -564,6 +564,7 @@ setRefClass("model",
                 }
 
                 print(length(inits))
+                print(length(quals))
                 print(length(is.na(quals)))
                 print(length(naquals))
                 
