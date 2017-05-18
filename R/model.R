@@ -563,12 +563,14 @@ setRefClass("model",
                     digest_already_quality_computed[[inits[[i]]$digest()]] <<- naquals[i]
                 }
                 
+
+                # change made after crash
+                # starts here 
                 print(length(is.na(quals)))
                 print(length(naquals))
                 print(is.na(quals))
                 print(naquals)
                 
-                # change made after crash
                 if(length(is.na(quals)) != length(naquals))
                 {
                   difference = length(is.na(quals)) - length(naquals)
@@ -584,6 +586,7 @@ setRefClass("model",
                 
                 print(length(is.na(quals)))
                 print(length(naquals))
+                # ends here 
                 
                 quals[is.na(quals)] <- naquals          
                 toc('quality_computation') 
