@@ -317,14 +317,6 @@ setRefClass("model",
 
             say(5,length(inits)-sum(filter),"initializations already used")
             
-            if(length(inits)>nb_init_max)
-            {
-                say(5,'Computing intializations quality')
-                quality <- as.numeric(.self$membership_init_quality(inits))
-                seuil <- (-sort(-quality))[nb_init_max]
-                filter <- filter & (quality >= seuil)
-            }
-
             inits <- inits[filter]
 
             say(4,"Estimation with",length(inits),"initializations")
@@ -522,7 +514,7 @@ setRefClass("model",
                     }
                     else
                     {
-                        return(as.numeric(qual))
+                        return(qual)
                     }
                 }
             )
