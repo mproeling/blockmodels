@@ -327,7 +327,7 @@ setRefClass("model",
                 # 2
                 print(quality)
                 
-                seuil <- (-sort(-quality))[nb_init_max]
+                seuil <- (sort(as.numeric(quality), decreasing = T))[nb_init_max]
                 filter <- filter & (quality >= seuil)
             }
 
